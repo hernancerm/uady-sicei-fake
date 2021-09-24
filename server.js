@@ -2,11 +2,9 @@
 
 const express = require("express");
 
-// Constants
 const PORT = 8080;
 const HOST = "0.0.0.0";
 
-// Data
 const students = [
   {
     fullName: "Hernán Cervera",
@@ -30,7 +28,6 @@ const students = [
   },
 ];
 
-// App
 const app = express();
 app.get("/students", (req, res) => {
   res.send(students);
