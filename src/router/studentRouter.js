@@ -1,4 +1,4 @@
-import { getAllStudents } from "../controllers/studentController";
+import { getAllStudents } from "../controller/studentController";
 
 import { Router } from "express";
 

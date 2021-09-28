@@ -1,4 +1,4 @@
-import studentRouter from "./routers/studentRouter";
+import studentRouter from "./router/studentRouter";
 
 import express from "express";
 
