@@ -1,17 +1,12 @@
 import StudentController from "../../src/controller/StudentController";
+import MockStudentService from "../mock/MockStudentService";
 
 import { getMockReq, getMockRes } from "@jest-mock/express";
 import "regenerator-runtime/runtime";
 
-const MockStudentService = () => {
-  const findAll = jest.fn();
-
-  return { findAll };
-};
+let studentController = undefined; // SUT
 
 let mockStudentService = undefined;
-
-let studentController = undefined; // SUT
 
 beforeEach(() => {
   mockStudentService = MockStudentService();
@@ -23,7 +18,7 @@ afterEach(() => {
 });
 
 test("mocks sanity check", () => {
-  expect(studentController).not.toBe(undefined);
+  expect(mockStudentService).not.toBe(undefined);
 });
 
 test("getAll should be successful", async () => {
