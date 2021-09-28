@@ -1,5 +1,3 @@
-# SICEI fake — Demo of a Dockerized web API
-
 ## Build and run
 
 Build the Docker image:
@@ -14,4 +12,4 @@ Run the Docker image:
 docker container run -p 49160:8080 -d --name c-hercerm-sicei hercerm/sicei
 ```
 
-See the list of students: <http://localhost:49160/students>
+See the list of students: <http://localhost:49160/api/students>
