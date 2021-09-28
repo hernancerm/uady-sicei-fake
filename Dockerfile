@@ -11,8 +11,9 @@ WORKDIR /usr/src/app
 # /usr/src/app, the package*.json will be copied to that dir.
 COPY . .
 
-# Install npm dependencies.
+# Install npm dependencies and build app.
 RUN npm install
+RUN npm run build
 
 # Port 8080 is inteded to be exposed. This line is for doc
 # purposes. To actually expose the port, use the option -p
@@ -21,4 +22,4 @@ EXPOSE 8080
 
 # Only one CMD should exist per Dockerfile. It sets the defaults
 # of how an executing container is executed.
-CMD [ "node", "server.js" ]
+CMD [ "npm", "run", "run" ]
