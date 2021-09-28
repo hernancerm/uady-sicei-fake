@@ -1,7 +1,9 @@
-import { findAllStudents } from "../service/studentService";
+const StudentController = (studentService) => {
+  const getAll = (req, res) => {
+    res.status(200).json(studentService.findAll());
+  };
 
-const getAllStudents = (req, res) => {
-  res.status(200).json(findAllStudents());
+  return { getAll };
 };
 
-export { getAllStudents };
+export default StudentController;
