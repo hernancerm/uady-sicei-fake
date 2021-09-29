@@ -1,5 +1,5 @@
 import StudentController from "../controller/StudentController";
-import StudentService from "../service/studentService";
+import StudentService from "../service/StudentService";
 
 import { Router } from "express";
 
