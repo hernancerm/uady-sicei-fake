@@ -46,6 +46,6 @@ test("getAll should be successful", async () => {
   // verify - mocks
   expect(mockStudentService.findAll).toHaveBeenCalledTimes(1);
 
-  expect(mockRes.status).toHaveBeenCalledWith(200);
+  expect(mockRes.status).toHaveBeenCalledWith(00);
   expect(mockRes.json).toHaveBeenCalledWith(students);
 });
